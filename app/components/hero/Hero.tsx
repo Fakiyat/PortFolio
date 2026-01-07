@@ -40,7 +40,7 @@ export default function HeroSection() {
         <ModernStatusBadge
           variant="floating"
           dotColor="orange"
-          text="Open to opportunities"
+          text="Available for SDE-1 / Frontend Engineer roles"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-[1.7fr_0.8fr] gap-13 items-center min-h-screen">
@@ -118,7 +118,7 @@ export default function HeroSection() {
               <PillButton
                 variant="secondary"
                 size="md"
-                href={`mailto:${personalInfo.email}`}
+                href={`#contact`}
                 icon={<IconMail className="h-5 w-5" />}
                 iconPosition="left"
               >

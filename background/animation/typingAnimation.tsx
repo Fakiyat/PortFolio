@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef, memo } from "react";
 import gsap from "gsap";
-import { TypingAnimation } from "../aboutAnimation/typingAnimation";
 
 interface TypingAnimationProps {
   texts: string[];

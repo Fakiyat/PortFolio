@@ -4,7 +4,7 @@ import { IconArrowUpRight } from "@tabler/icons-react";
 import { aboutData } from "@/data/data";
 import AboutInfoCards from "../ui/AboutCard/AboutCard";
 import { useEffect, useRef } from "react";
-import { initAboutAnimations } from "@/background/aboutAnimation/aboutAnimation";
+import { initAboutAnimations } from "@/background/aboutAnimation/aboutanimation";
 
 export default function AboutSectionComplete() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -33,7 +33,7 @@ export default function AboutSectionComplete() {
             <h2
               className="text-[10rem] sm:text-[10rem] lg:text-[15rem] font-black tracking-wide select-none leading-none"
               style={{
-                WebkitTextStroke: "3px rgba(255, 255, 255, 0.07)",
+                WebkitTextStroke: "3px rgba(255, 255, 255, 0.05)",
                 color: "transparent",
               }}
             >
@@ -99,7 +99,7 @@ export default function AboutSectionComplete() {
                   <div className="relative">
                     <div className="relative rounded-full overflow-hidden border-4 border-zinc-900/80 shadow-2xl shadow-black/50 w-80 h-80 lg:w-96 lg:h-96">
                       <Image
-                        src={aboutData.profileImage}
+                        src={aboutData.profileImage2}
                         alt={aboutData.greeting}
                         width={500}
                         height={500}

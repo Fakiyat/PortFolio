@@ -38,8 +38,8 @@ export const personalInfo = {
   headline:
     "I build beautiful, animated, high-performance websites using React, Next.js, TypeScript, TailwindCSS & GSAP.",
   email: "fakiyatafaq@gmail.com",
-  github: "https://github.com/fakiyatafaq",
-  linkedin: "https://linkedin.com/in/fakiyatafaq",
+  github: "https://github.com/Fakiyat",
+  linkedin: "https://linkedin.com/in/fakiyat-afaq-b6a936279",
   resumeUrl: "/Resume.pdf",
   intro: [
     "Bachelor's in Computer Science (AI specialization)",
@@ -79,7 +79,8 @@ export const aboutData = {
   subtitle: "Crafting modern web interfaces with React & Next.js",
   description: `I develop intuitive and visually consistent web applications by combining thoughtful UI design with efficient frontend development. My goal is to build products that feel smooth, reliable, and easy to navigate.`,
 
-  profileImage: "/Hero-logo.png",
+  profileImage: "/code2.png",
+  profileImage2: "/Hero-logo.png",
   stats: [
     {
       number: "Multiple",
@@ -344,7 +345,7 @@ export const personaldetails = {
     "I help startups grow with smart design and modern web development, based in Karnataka, India.",
   phone: "+91 XXX XXX XXXX", // Optional
   location: "Karnataka, India",
-  twitter: "https://twitter.com/yourhandle", // Optional
+  twitter: "https://twitter.com/fakiyatafaq", // Optional
 
   // ... rest of your existing fields
 };

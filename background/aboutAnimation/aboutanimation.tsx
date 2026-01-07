@@ -1,6 +1,5 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { createTypingAnimation } from "./typingAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
