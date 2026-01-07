@@ -1,26 +1,136 @@
 @import "tailwindcss";
 
+/* ================================
+   GLOBAL COLOR VARIABLES
+   ================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --accent: #ff7b00; /* premium orange */
+  --accent-hover: #ff8c00;
+
+  --foreground: #e5e5e5;
+  --foreground-muted: #9b9b9b;
+
+  --matte-black-1: #0d0d0d;
+  --matte-black-2: #111111;
+  --matte-black-3: #1a1a1a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* GLOBAL BACKGROUND */
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    100deg,
+    var(--matte-black-1),
+    var(--matte-black-2),
+    var(--matte-black-3)
+  );
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* smooth transitions */
+* {
+  transition: background-color 0.25s ease, color 0.2s ease, border 0.2s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ACCENT BUTTON */
+.btn-accent {
+  background: var(--accent);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.btn-accent:hover {
+  background: var(--accent-hover);
+}
+
+/* OUTLINE BUTTON */
+.btn-outline {
+  color: var(--foreground);
+  border: 1px solid var(--foreground-muted);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* CARD STYLE */
+.matte-card {
+  background: #151515;
+  border: 1px solid #222;
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  padding: 20px;
+}
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-8deg);
+  }
+  60% {
+    transform: rotate(14deg);
+  }
+  80% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(168, 85, 247, 0.3) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.3);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.5);
+}
+
+/* Smooth scroll behavior */
+.scrollbar-thin {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar on mobile for cleaner look */
+@media (max-width: 1024px) {
+  .scrollbar-thin::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
 }
