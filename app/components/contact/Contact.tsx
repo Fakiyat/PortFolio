@@ -331,9 +331,10 @@ export default function ContactSection() {
         <div className="relative hidden lg:block">
           <div className="absolute inset-0">
             <Image
-              src="/earth.jpg" // replace with your actual 3D image
+              src="/earth.webp" // replace with your actual 3D image
               alt="Contact illustration"
               fill
+              sizes="100vw"
               className="object-cover"
               priority
             />

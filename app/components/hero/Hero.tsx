@@ -157,7 +157,7 @@ export default function HeroSection() {
                 <div className="relative">
                   <div className="relative rounded-full overflow-hidden border-4 border-zinc-900/80 shadow-2xl shadow-black/50 w-70 h-90 lg:w-100 lg:h-120">
                     <Image
-                      src={aboutData.profileImage}
+                      src="/code2.webp"
                       alt={aboutData.greeting}
                       width={500}
                       height={500}

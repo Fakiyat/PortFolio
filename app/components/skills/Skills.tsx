@@ -10,9 +10,10 @@ export default function Skills() {
       className="relative w-full min-h-screen py-16 lg:py-24 "
     >
       <Image
-        src="/background.jpg"
+        src="/background.webp"
         alt="Hero background"
         fill
+        sizes="100vw"
         priority
         className="object-cover"
       />

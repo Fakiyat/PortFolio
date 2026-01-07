@@ -99,7 +99,7 @@ export default function AboutSectionComplete() {
                   <div className="relative">
                     <div className="relative rounded-full overflow-hidden border-4 border-zinc-900/80 shadow-2xl shadow-black/50 w-80 h-80 lg:w-96 lg:h-96">
                       <Image
-                        src={aboutData.profileImage2}
+                        src="/Hero-logo.webp"
                         alt={aboutData.greeting}
                         width={500}
                         height={500}
