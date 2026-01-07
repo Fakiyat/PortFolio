@@ -19,7 +19,7 @@ export function useInViewport<T extends HTMLElement>(
 
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, []);
+  }, [options]);
 
   return { ref, inView };
 }

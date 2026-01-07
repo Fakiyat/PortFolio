@@ -125,11 +125,10 @@ export default function AboutSectionComplete() {
                 {aboutData.stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="group relative bg-zinc-950/60 backdrop-blur-sm border border-zinc-800/60 rounded-2xl p-5 sm:p-6 hover:border-purple-500/50 transition-all duration-500 hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1 overflow-hidden"
-                    style={{ animationDelay: `${index * 100}ms` }}
+                    className="group relative  bg-zinc-950/60 backdrop-blur-sm border border-zinc-800/60 rounded-2xl p-5 sm:p-6 hover:border-amber-500/50 transition-all duration-500 hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1 overflow-hidden"
                   >
                     {/* Animated gradient overlay on hover */}
-                    <div className="absolute inset-0 bg-linear-to-br from-purple-500/0 via-pink-500/0 to-yellow-400/0 group-hover:from-purple-500/5 group-hover:via-pink-500/5 group-hover:to-yellow-400/5 transition-all duration-700" />
+                    <div className="absolute inset-0 bg-linear-to-br from-purple-500/0 via-pink-500/0 to-yellow-400/0 group-hover:from-amber-500/5 group-hover:via-yellow-500/5 group-hover:to-yellow-400/5 transition-all duration-700" />
 
                     <div className="relative text-center space-y-2">
                       {/* Number with suffix */}

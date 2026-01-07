@@ -104,7 +104,7 @@ export default function HeroSection() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-6 animate-fade-in animation-delay-800">
+            <div className="flex flex-wrap items-center gap-4 pt-6  animate-fade-in animation-delay-800">
               <PillButton
                 variant="primary"
                 size="md"

@@ -1,6 +1,6 @@
 "use client";
 
-import { Ski, skills } from "@/data/data";
+import { skills } from "@/data/data";
 import Image from "next/image";
 
 export default function Skills() {

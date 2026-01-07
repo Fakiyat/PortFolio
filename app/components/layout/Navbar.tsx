@@ -76,12 +76,12 @@ function Navbar() {
                 flex items-center justify-center
                 w-12 h-12 rounded-full
                 text-white/70
-                hover:text-purple-600
-                hover:bg-purple-300/20
+                hover:text-amber-500
+                hover:bg-yellow-300/20
                 transition-all duration-300
               ${
                 active === id
-                  ? "bg-purple-500/20 text-white"
+                  ? "bg-yellow-300/20 text-white"
                   : "text-white/60 hover:bg-white/10"
               }
               
@@ -95,7 +95,7 @@ function Navbar() {
               className="
                 absolute -bottom-2 left-1/2 -translate-x-1/2
                 w-2 h-2 rounded-full
-                bg-purple-500
+                bg-amber-500
                 opacity-0 group-hover:opacity-100
                 transition
               "

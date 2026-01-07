@@ -51,7 +51,7 @@ function TypingContactComponent({
   cursorClassName = "",
   onTypeComplete,
 }: TypingAnimationProps) {
-  const { textRef, controls } = useTypingAnimation({
+  const { textRef } = useTypingAnimation({
     texts,
     typeSpeed,
     deleteSpeed,

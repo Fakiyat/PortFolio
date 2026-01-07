@@ -43,7 +43,7 @@ const PillButton = React.forwardRef<HTMLButtonElement, PillButtonProps>(
     // Variant styles
     const variantStyles = {
       primary:
-        "bg-linear-to-r from-amber-400 via-yellow-400 to-orange-500 text-black shadow-lg shadow-amber-500/30 hover:shadow-xl hover:shadow-orange-500/40",
+        "bg-linear-to-r from-amber-400 via-yellow-400 to-orange-500 text-black shadow-lg shadow-amber-500/30 hover:shadow-lg hover:shadow-amber-500/30",
 
       secondary:
         "bg-linear-to-r from-zinc-800 to-zinc-900 text-amber-400 border border-amber-500/40 hover:border-orange-500/60 hover:shadow-lg hover:shadow-amber-500/20",

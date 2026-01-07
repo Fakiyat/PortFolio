@@ -9,7 +9,6 @@ if (typeof window !== "undefined") {
 
 function FloatingCodeSyntax3D() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const mouseRef = useRef({ x: 0, y: 0 });
   const [shouldRender, setShouldRender] = useState(false);
   const [isIdle, setIsIdle] = useState(false);
   const [isInView, setIsInView] = useState(false);
