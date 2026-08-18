@@ -26,25 +26,27 @@ import {
 
 export const HeroData: Herotype = {
   name: "Fakiyat Afaq",
-  role: "Frontend Developer & Designer",
+  role: "Frontend Developer & UI Engineer",
   description:
-    "I build beautiful, animated, high-performance websites using React, Next.js, TypeScript, TailwindCSS & GSAP.",
-  resumeLink: "/resume.pdf",
+    "I build responsive, scalable, and high-performance web applications using React, Next.js, TypeScript, TailwindCSS, Zustand & Framer Motion.",
+  resumeLink: "/Resume.pdf",
   contactLink: "#contact",
 };
+
 export const personalInfo = {
   name: "Fakiyat Afaq",
-  role: "Frontend Developer",
+  role: "Software Engineer – Frontend",
+  phone: "+91-70066-18176",
   headline:
-    "I build beautiful, animated, high-performance websites using React, Next.js, TypeScript, TailwindCSS & GSAP.",
-  email: "fakiyatafaq@gmail.com",
+    "Software Engineer specializing in building pixel-perfect, scalable web applications, real-time AI platforms, and high-performance user interfaces.",
+  email: "fakiyatafaq14@gmail.com",
   github: "https://github.com/Fakiyat",
-  linkedin: "https://linkedin.com/in/fakiyat-afaq-b6a936279",
+  linkedin: "https://www.linkedin.com/in/fakiyat-afaq-b6a936279",
   resumeUrl: "/Resume.pdf",
   intro: [
-    "Bachelor's in Computer Science (AI specialization)",
-    "Frontend-focused React / Next.js developer",
-    "Experience building SaaS dashboards and role-based systems",
+    "B.Tech in Computer Science (Artificial Intelligence)",
+    "Software Engineer – Frontend @ Lytehire.ai",
+    "Specialized in AI platforms, real-time WebSockets & SaaS architecture",
   ],
 };
 
@@ -52,85 +54,87 @@ export const aboutMe = {
   background: {
     title: "Background",
     content:
-      "CS graduate with AI specialization who transitioned into frontend development driven by a passion for UI/UX and building scalable web applications.",
+      "Computer Science (Artificial Intelligence) graduate from Jamia Hamdard University with hands-on experience developing enterprise SaaS platforms, AI-driven interview workflows, and complex frontend architectures.",
   },
   interests: {
     title: "What I Enjoy",
     items: [
-      "Building clean, intuitive user interfaces",
-      "Writing maintainable, well-documented code",
-      "Optimizing performance and user experience",
+      "Building high-impact, pixel-perfect user interfaces",
+      "Architecting real-time WebSockets & video streaming pipelines",
+      "Optimizing web applications for peak Core Web Vitals",
     ],
   },
   softSkills: {
     title: "Soft Skills",
     items: [
-      "Team collaboration & communication",
-      "Strong ownership mindset",
-      "Continuous learning & adaptability",
+      "Ownership & problem-solving mindset",
+      "Cross-functional AI & engineering collaboration",
+      "Continuous learning & fast adaptability",
     ],
   },
 };
-// ============ ABOUT SECTION DATA ============
+
 export const aboutData = {
   status: "About Me",
-  greeting: "Hello, I'm a Frontend Developer",
+  greeting: "Hello, I'm a Frontend Software Engineer",
   title: "Fakiyat Afaq",
-  subtitle: "Crafting modern web interfaces with React & Next.js",
-  description: `I develop intuitive and visually consistent web applications by combining thoughtful UI design with efficient frontend development. My goal is to build products that feel smooth, reliable, and easy to navigate.`,
+  subtitle: "Building high-performance React & Next.js web applications",
+  description: `Frontend Developer skilled in building responsive, scalable, and high-performance web applications using React.js, Next.js, TypeScript, Tailwind CSS, Zustand, Redux, and React Query. Experienced in API integration, authentication, reusable component architecture, dashboards, and performance optimization.`,
 
-  profileImage: "/code2.png",
-  profileImage2: "/Hero-logo.png",
+  profileImage: "/code2.webp",
+  profileImage2: "/Hero-logo.webp",
   stats: [
     {
-      number: "Multiple",
-      label: "Live Projects",
-      sublabel: "Successfully Delivered",
+      number: "3",
+      suffix: "+",
+      label: "Roles & Companies",
+      sublabel: "Lytehire.ai, Internet Eagle, Brisk Bold",
     },
     {
-      number: "1",
+      number: "2",
       suffix: "+",
-      label: "Year of",
-      sublabel: "Frontend Experience",
+      label: "Years of",
+      sublabel: "Frontend & AI Development",
     },
     {
-      number: "X",
-      suffix: "+",
-      label: "Web Applications",
-      sublabel: "Built & Deployed",
+      number: "100",
+      suffix: "%",
+      label: "Commitment to",
+      sublabel: "Performance & Pixel Perfection",
     },
   ],
 
-  downloadCV: "/resume.pdf",
+  downloadCV: "/Resume.pdf",
 };
 
 export const aboutDetails = {
   philosophy:
-    "I believe great web experiences come from the perfect balance of aesthetic appeal and functional excellence.",
+    "Great software comes from combining clean component design, lightning-fast load times, and intuitive user experiences.",
   approach: [
-    "User-first thinking in every design decision",
-    "Writing clean, maintainable, and scalable code",
-    "Staying current with modern web technologies",
-    "Collaborating effectively with teams and stakeholders",
+    "Pixel-perfect UI design execution",
+    "State management with Context API, Zustand & Redux Toolkit",
+    "Real-time streaming & WebSocket architecture",
+    "Performance optimization & accessibility",
   ],
   highlights: [
-    "Built enterprise-level SaaS applications serving thousands of users",
-    "Specialized in creating complex, role-based dashboard systems",
-    "Strong focus on performance optimization and accessibility",
-    "Experienced in full project lifecycle from concept to deployment",
+    "Architected full AI-powered interview platform with dual-camera feeds & WebSockets",
+    "Built recorded interview video pipeline streaming chunks with post-interview analytics",
+    "Implemented anti-cheating fullscreen system & real-time polling synchronization",
+    "Improved page load times by 25%-35% and boosted feature delivery speed by 40%",
   ],
 };
+
 export const skills = {
   frontend: {
-    title: "Frontend",
+    title: "Frontend Core",
     icon: IconCode,
     items: [
-      { name: "React", level: 90, icon: IconBrandReact },
-      { name: "Next.js", level: 85, icon: IconBrandNextjs },
-      { name: "TypeScript", level: 80, icon: IconBrandTypescript },
-      { name: "JavaScript", level: 85, icon: IconBrandJavascript },
-      { name: "HTML5", level: 90, icon: IconBrandHtml5 },
-      { name: "CSS3", level: 85, icon: IconBrandCss3 },
+      { name: "React.js", level: 95, icon: IconBrandReact },
+      { name: "Next.js", level: 90, icon: IconBrandNextjs },
+      { name: "TypeScript", level: 90, icon: IconBrandTypescript },
+      { name: "JavaScript (ES6+)", level: 95, icon: IconBrandJavascript },
+      { name: "HTML5", level: 95, icon: IconBrandHtml5 },
+      { name: "CSS3", level: 90, icon: IconBrandCss3 },
     ],
   },
 
@@ -138,65 +142,101 @@ export const skills = {
     title: "UI & Styling",
     icon: IconPalette,
     items: [
-      { name: "Tailwind CSS", level: 90, icon: IconBrandTailwind },
-      { name: "Ant Design", level: 80, icon: IconLayoutGrid },
-      { name: "Framer Motion", level: 75, icon: IconBrandFramer },
-      { name: "Responsive Design", level: 90, icon: IconLayoutGrid },
+      { name: "Tailwind CSS", level: 95, icon: IconBrandTailwind },
+      { name: "Shadcn UI", level: 90, icon: IconLayoutGrid },
+      { name: "Ant Design", level: 85, icon: IconLayoutGrid },
+      { name: "Framer Motion", level: 85, icon: IconBrandFramer },
+      { name: "Material UI", level: 80, icon: IconLayoutGrid },
+      { name: "Bootstrap", level: 85, icon: IconLayoutGrid },
     ],
   },
 
   stateData: {
-    title: "State & Data",
+    title: "State Management & Data",
     icon: IconDatabase,
     items: [
-      { name: "Zustand", level: 75, icon: IconDatabase },
-      { name: "React Query", level: 80, icon: IconDatabase },
-      { name: "Fetch API", level: 85, icon: IconApi },
-      { name: "REST APIs", level: 80, icon: IconApi },
+      { name: "Zustand", level: 90, icon: IconDatabase },
+      { name: "React Query", level: 90, icon: IconDatabase },
+      { name: "Redux Toolkit", level: 85, icon: IconDatabase },
+      { name: "WebSockets", level: 85, icon: IconApi },
+      { name: "Context API", level: 95, icon: IconDatabase },
+      { name: "REST APIs", level: 95, icon: IconApi },
     ],
   },
 
-  backend: {
-    title: "Backend Basics",
+  aiTools: {
+    title: "AI & Automation",
     icon: IconServer,
     items: [
-      { name: "Django", level: 65, icon: IconBrandDjango },
-      { name: "Node.js", level: 60, icon: IconBrandNodejs },
-      { name: "PostgreSQL", level: 60, icon: IconDatabase },
-      { name: "REST APIs", level: 75, icon: IconServer },
+      { name: "AI Builder", level: 85, icon: IconServer },
+      { name: "Power Automate", level: 85, icon: IconTool },
+      { name: "Prompt Engineering", level: 90, icon: IconCode },
+      { name: "OCR Pipelines", level: 85, icon: IconServer },
+      { name: "Python", level: 75, icon: IconCode },
+      { name: "OpenCV", level: 70, icon: IconServer },
     ],
   },
 
   tools: {
-    title: "Tools",
+    title: "Dev Tools & DevOps",
     icon: IconTool,
     items: [
-      { name: "Git", level: 85, icon: IconBrandGit },
-      { name: "GitHub", level: 85, icon: IconBrandGithub },
-      { name: "Vercel", level: 80, icon: IconBrandVercel },
-      { name: "Figma", level: 70, icon: IconBrandFigma },
-      { name: "VS Code", level: 90, icon: IconBrandVscode },
-      { name: "Postman", level: 75, icon: IconApi },
+      { name: "Git & GitHub", level: 90, icon: IconBrandGithub },
+      { name: "VS Code", level: 95, icon: IconBrandVscode },
+      { name: "Vercel", level: 90, icon: IconBrandVercel },
+      { name: "Figma", level: 85, icon: IconBrandFigma },
+      { name: "Postman", level: 90, icon: IconApi },
+      { name: "AWS & Docker", level: 75, icon: IconServer },
     ],
   },
-};
-export const Ski = {
-  status: "Skills",
 };
 
 export const projects = [
   {
     id: 1,
-    title: "Sports Management SaaS",
+    title: "AI-Powered Interview Platform (Lytehire.ai)",
     description:
-      "A comprehensive sports facility management platform with authentication, booking workflows, and role-based dashboards optimized for performance and scalability.",
-    tech: ["Next.js", "TypeScript", "Zustand", "Tailwind CSS", "Ant Design"],
+      "End-to-end AI candidate screening platform with candidate + AI agent dual-camera feeds, WebSockets real-time sync, recorded interview chunk streaming, and post-interview video analytics.",
+    tech: [
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "WebSockets",
+      "Context API",
+      "Node.js",
+    ],
     features: [
-      "Authentication & protected routes",
-      "Real-time booking workflows",
-      "Role-based access control",
-      "Admin & user dashboards",
-      "Scalable frontend architecture",
+      "Dual-camera system (candidate + AI agent feeds)",
+      "Real-time WebSocket AI agent connection",
+      "Recorded video interview pipeline streaming chunks",
+      "Post-interview analytics & compatibility scoring",
+      "Anti-cheating mandatory fullscreen enforcement",
+      "Automated email notification workflow for invites",
+    ],
+    image: "/Wasla.webp",
+    liveUrl: "#",
+    codeUrl: "#",
+    featured: true,
+  },
+  {
+    id: 2,
+    title: "Sports Management SaaS Application",
+    description:
+      "Comprehensive sports facility management SaaS platform with authentication, transaction-like booking workflows, team creation, and role-based access control.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Zustand",
+      "Ant Design",
+      "Tailwind CSS",
+      "REST API",
+    ],
+    features: [
+      "Modern SaaS platform for facility & team bookings",
+      "Architected secure route handling with middleware",
+      "Transaction-like checkout booking flows",
+      "Real-time schedule management & dynamic routing",
+      "Role-based access control (Admin, Host, User)",
     ],
     image: "/sports.webp",
     liveUrl: "#",
@@ -204,17 +244,17 @@ export const projects = [
     featured: true,
   },
   {
-    id: 2,
-    title: "Vehicle Inventory Management System",
+    id: 3,
+    title: "Custom Ecommerce Web Application",
     description:
-      "Full-stack inventory management system built with React and Django, supporting CRUD operations, file uploads, and secure multi-user access.",
-    tech: ["React", "Django", "PostgreSQL", "REST API", "Tailwind CSS"],
+      "Full-featured ecommerce web application with product listings, search filtering, cart management, JWT authentication, and automated lead capture CRM tools.",
+    tech: ["React.js", "Node.js", "REST APIs", "HTML5", "CSS3", "Tailwind CSS"],
     features: [
-      "Complete CRUD operations",
-      "Vehicle file uploads",
-      "Multi-user inventory tracking",
-      "Search & filtering",
-      "Secure authentication",
+      "Product search, category filtering & cart updates",
+      "Order summary & WooCommerce-like checkout flow",
+      "JWT-based authentication & protected routes",
+      "Lazy loading, state management & API caching",
+      "Integrated forms & CRM lead capture automation",
     ],
     image: "/vehicel.webp",
     liveUrl: "#",
@@ -222,35 +262,16 @@ export const projects = [
     featured: true,
   },
   {
-    id: 3,
-    title: "School Management System",
-    description:
-      "Enterprise-grade school management platform with distinct dashboards for teachers, students, and administrators, built for scalability.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "REST API", "Zustand"],
-    features: [
-      "Teacher / Student / Admin roles",
-      "Dynamic role-based dashboards",
-      "Advanced forms & tables",
-      "API-driven architecture",
-      "Clean scalable codebase",
-    ],
-    image: "/school.webp",
-    liveUrl: "#",
-    codeUrl: "#",
-    featured: true,
-  },
-  {
     id: 4,
-    title: "RankoLink (Full-Stack Website)",
+    title: "RankoLink (SEO & Backlink Platform)",
     description:
-      "A production-ready SEO and backlink management platform focused on performance, analytics, and clean UI for marketing teams.",
+      "A production-ready SEO and backlink management web platform focused on performance, analytics dashboards, and clean UI for marketing teams.",
     tech: ["Next.js", "React", "Tailwind CSS", "REST API"],
     features: [
       "SEO-focused UI architecture",
       "Performance-optimized pages",
       "Clean marketing dashboards",
-      "Responsive layouts",
-      "Scalable component system",
+      "Responsive layouts & component library",
     ],
     image: "/Ranko.webp",
     liveUrl: "https://ranko-link-7su3.vercel.app/",
@@ -259,16 +280,15 @@ export const projects = [
   },
   {
     id: 5,
-    title: "WaslaOne Platform",
+    title: "AI-Powered Job Finder Product",
     description:
-      "A modern MVP creation web platform featuring advanced hero animations, globe interaction, and performance-focused UI using motion libraries.",
-    tech: ["React", "Next.js", "Framer Motion", "Tailwind CSS"],
+      "AI job matching platform where users submit resumes or natural language prompts, AI agents scrape & surface matched listings, and candidates track & apply directly.",
+    tech: ["React.js", "TypeScript", "AI Agents", "Tailwind CSS", "REST API"],
     features: [
-      "Advanced hero animations",
-      "Interactive globe component",
-      "Motion-driven UX",
-      "Performance-optimized rendering",
-      "Modern UI system",
+      "Natural language prompt & resume job matching",
+      "AI agent web scraping & listing aggregation",
+      "Save, track & direct application dashboard",
+      "Responsive motion-driven UX",
     ],
     image: "/Wasla.webp",
     liveUrl: "https://walsa-one.vercel.app/",
@@ -280,52 +300,112 @@ export const projects = [
 export const experience = [
   {
     id: 1,
-    role: "Frontend Developer",
-    company: "The Internet Eagle (Startup)",
-    period: "Jan 2025 – Present",
+    role: "Software Engineer – Frontend",
+    company: "Lytehire.ai",
+    location: "Full-time",
+    period: "Feb 2026 – Present",
     description:
-      "Working as a frontend developer on scalable SaaS applications with a strong focus on performance, user experience, and maintainable architecture.",
+      "Architecting AI-powered candidate screening products, real-time video streaming pipelines, anti-cheating security systems, and high-converting marketing applications.",
+    metrics: [
+      "AI Interview Platform",
+      "Dual-Camera Feeds",
+      "Real-Time WebSockets",
+      "Anti-Cheating Engine",
+    ],
+    tech: [
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "WebSockets",
+      "Context API",
+      "Google Sheets API",
+    ],
     responsibilities: [
-      "Built and optimized responsive web applications using React.js, improving page load performance by ~25%",
-      "Developed real-time dashboards for facility booking, team management, and role-based access",
-      "Implemented lazy loading, sortable tables, and dynamic imports to reduce initial load time by ~35%",
-      "Used Zustand for global state management to improve state reliability and user flow",
-      "Integrated REST APIs and collaborated closely with backend teams to ensure data consistency",
-      "Implemented JWT-based authentication, protected routes, and session handling",
-      "Built reusable UI components, improving design consistency and reducing feature development time",
+      "Built the company's marketing website from scratch using React.js, TypeScript, and Tailwind CSS, featuring animated multi-page layouts, Context API state management, backend API integration, legal/compliance section, and lead capture forms connected to Google Sheets via API.",
+      "Architected and implemented a full AI-powered interview platform end-to-end – designed all candidate-facing interview screens and flows, integrated a dual-camera system (candidate + AI agent feeds), and used WebSockets to connect the AI agent to the frontend in real time.",
+      "Built a recorded interview pipeline that streamed session footage to the frontend in progressive chunks, and delivered post-interview analytics including per-question video reviews, overall compatibility scores, and assessments such as cultural fit and technical proficiency.",
+      "Implemented an anti-cheating system enforcing mandatory fullscreen mode throughout the interview session, and managed complex application state using Context API with real-time polling for live session synchronization.",
+      "Engineered an automated email notification workflow that dispatches personalized interview session invites to shortlisted candidates upon selection.",
+      "Currently building an AI-powered Job Finder product – users submit a resume or natural language prompt, AI agents scrape matched job listings, and users can save, track, and apply to positions directly within the platform.",
     ],
   },
   {
     id: 2,
-    role: "AI & Automation Engineer",
-    company: "Brisk Bold AI Services",
-    period: "Feb 2024 – Dec 2024",
+    role: "Frontend Developer (Full-Stack Web Development)",
+    company: "The Internet Eagle",
+    location: "Full-time",
+    period: "Jan 2025 – Dec 2025",
     description:
-      "Worked on automation and AI-driven workflows to reduce manual effort and improve operational efficiency for business processes.",
+      "Developed production-grade web applications, WooCommerce-style booking workflows, dynamic role-based dashboards, and performance-optimized architectures.",
+    metrics: [
+      "25% Faster Page Load",
+      "35% Reduced Initial Load",
+      "40% Faster Feature Delivery",
+      "Role-Based SaaS",
+    ],
+    tech: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React.js",
+      "Zustand",
+      "REST APIs",
+      "JWT Auth",
+    ],
     responsibilities: [
-      "Automated business workflows using Power Automate and AI Builder, reducing manual work by ~70%",
-      "Built an OCR-based invoice processing pipeline with improved accuracy and faster processing",
-      "Designed automated routing, approval, and cloud-based workflows to reduce processing delays",
-      "Worked on AI-assisted document extraction and validation pipelines",
-      "Collaborated with cross-functional teams to deploy and monitor automation solutions",
+      "Designed and developed responsive, production-grade web applications using HTML, CSS, JavaScript, and React.js, improving page load performance by 25% through component optimization and code-splitting.",
+      "Built ecommerce-style booking and checkout workflows (cart-like flows, order handling, role-based access) similar to WooCommerce-based systems.",
+      "Implemented dynamic dashboards for facility booking, user management, and role-based access control, handling both frontend logic and backend API integration.",
+      "Added lazy loading, sortable tables, filters, and dynamic imports, reducing initial load time by 35% and improving Core Web Vitals.",
+      "Integrated REST APIs, authentication, and backend services using JWT-based authentication, protected routes, and session handling.",
+      "Worked with CMS-style architectures, contributing to feature customization, data-driven UI modules, and extensible website functionality.",
+      "Optimized application performance, security, and UX through reusable components, state management using Zustand, reducing feature delivery time by 40%.",
+      "Participated in deployment, testing, and production debugging, ensuring stable releases and smooth user experiences.",
     ],
   },
   {
     id: 3,
-    role: "Frontend Developer Intern",
-    company: "Red Stag Labs",
-    period: "Jun 2023 – Jan 2024",
+    role: "AI & Automation Engineer",
+    company: "Brisk Bold AI Services",
+    location: "Remote",
+    period: "Feb 2024 – Dec 2024",
     description:
-      "Gained hands-on experience building frontend features and collaborating on full-stack web applications.",
+      "Automated business workflows and engineered high-accuracy OCR document processing pipelines to eliminate manual operational bottlenecks.",
+    metrics: [
+      "70% Manual Work Reduced",
+      "40% Better OCR Accuracy",
+      "50% Faster Processing",
+      "60% Reduced Delay",
+    ],
+    tech: [
+      "Power Automate",
+      "AI Builder",
+      "OCR Pipeline",
+      "OpenCV",
+      "Python",
+      "Cloud Automation",
+    ],
     responsibilities: [
-      "Developed and maintained web applications using React.js, Next.js, HTML, CSS, and Bootstrap",
-      "Worked with Node.js and Express APIs for authentication, data fetching, and role-based access",
-      "Collaborated with designers to convert UI/UX designs into pixel-perfect interfaces",
-      "Used AI tools like ChatGPT and Claude for debugging, refactoring, and test-case generation",
-      "Improved development speed and code quality through reusable components and better structure",
+      "Automated business workflows with Power Automate + AI Builder, reducing manual work by 70%.",
+      "Built an OCR invoice pipeline with 40% better accuracy and 50% faster processing speed.",
+      "Designed automated routing, approval, and cloud processes reducing operational delays by 60%.",
+      "Worked on AI-assisted document extraction, validation pipelines, and cross-functional automation deployments.",
     ],
   },
 ];
+
+export const education = {
+  institution: "Jamia Hamdard University",
+  degree:
+    "Bachelor of Technology in Computer Science (Artificial Intelligence)",
+  period: "2020 – 2024",
+  highlights: [
+    "Specialized in Artificial Intelligence, Neural Networks, and Web Engineering",
+    "Gained strong foundations in Data Structures, Algorithms, Systems Architecture, and Database Systems",
+    "Participated in frontend hackathons and AI application development projects",
+  ],
+};
+
 export const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
@@ -336,16 +416,11 @@ export const navLinks = [
 ];
 
 export const personaldetails = {
-  // ... your existing fields
-
-  // Contact Section - Add these new fields:
-  profileImage: "/profile.jpg", // Your profile image path
-  role: "Frontend Developer",
+  profileImage: "/code2.webp",
+  role: "Software Engineer – Frontend",
   contactDescription:
-    "I help startups grow with smart design and modern web development, based in Karnataka, India.",
-  phone: "+91 XXX XXX XXXX", // Optional
-  location: "Karnataka, India",
-  twitter: "https://twitter.com/fakiyatafaq", // Optional
-
-  // ... rest of your existing fields
+    "Available for Frontend Engineer / SDE-1 roles. Open to remote opportunities worldwide.",
+  phone: "+91-70066-18176",
+  location: "India",
+  twitter: "https://twitter.com/fakiyatafaq",
 };

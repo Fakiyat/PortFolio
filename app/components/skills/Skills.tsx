@@ -1,135 +1,132 @@
 "use client";
 
+import { motion, Variants } from "framer-motion";
 import { skills } from "@/data/data";
 import Image from "next/image";
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative w-full min-h-screen py-16 lg:py-24 "
+      className="relative w-full min-h-screen py-20 lg:py-28 overflow-hidden"
     >
+      {/* Background Image Layer */}
       <Image
         src="/background.webp"
-        alt="Hero background"
+        alt="Background pattern"
         fill
         sizes="100vw"
         priority
-        className="object-cover"
+        className="object-cover opacity-20 filter contrast-125"
       />
+      <div className="absolute inset-0 bg-black/80 backdrop-blur-xs" />
 
-      <div className="absolute inset-0 bg-black/60" />
-      {/* Background Text */}
-
-      <div className="relative max-w-auto mx-auto px-6 sm:px-8 lg:px-12 z-10">
-        <div className="flex justify-center mb-16 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-zinc-900/90 backdrop-blur-md border border-zinc-800/60 hover:border-yellow-400/50 transition-colors duration-300">
-            <div className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse-glow" />
+      {/* Content Container */}
+      <div className="relative max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 z-10">
+        {/* Status Pill */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center mb-8"
+        >
+          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-zinc-900/90 backdrop-blur-md border border-zinc-800">
+            <div className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
             <span className="text-xs font-semibold text-zinc-300 tracking-widest uppercase">
-              Skills
+              Tech Stack
             </span>
           </div>
-        </div>
+        </motion.div>
+
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <p className="text-zinc-400 tracking-widest uppercase text-xs mb-3">
-            What I work with
-          </p>
-          <h3 className="text-4xl sm:text-5xl font-bold text-white">
-            Technical <span className="text-yellow-400">Skills</span>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16 space-y-3"
+        >
+          <h3 className="text-4xl sm:text-6xl font-extrabold text-white">
+            Technical <span className="text-amber-400">Expertise</span>
           </h3>
-        </div>
+          <p className="text-zinc-400 text-base sm:text-lg max-w-xl mx-auto font-light">
+            Modern tools, frameworks, and libraries I use to build scalable digital experiences.
+          </p>
+        </motion.div>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
-          {Object.values(skills).map((group, idx) => (
-            <div
-              key={idx}
-              className="group relative min-w-[320px] sm:min-w-[380px] lg:min-w-[420px] bg-zinc-950/80 backdrop-blur-md border border-zinc-800/60 rounded-2xl p-6 lg:p-8 hover:border-yellow-400/40 transition-all duration-500 hover:shadow-xl hover:shadow-yellow-400/5"
-            >
-              {/* Gradient hover overlay */}
-              <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-purple-500/0 via-pink-500/0 to-yellow-400/0 group-hover:from-purple-500/5 group-hover:via-pink-500/5 group-hover:to-yellow-400/5 transition-all duration-700" />
+        {/* Categorized Skills Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
+        >
+          {Object.values(skills).map((group, idx) => {
+            const GroupIcon = group.icon;
+            return (
+              <motion.div
+                key={idx}
+                variants={cardVariants}
+                whileHover={{ y: -6 }}
+                className="group relative bg-zinc-950/80 backdrop-blur-md border border-zinc-800/80 rounded-3xl p-6 sm:p-8 hover:border-amber-500/40 hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 flex flex-col justify-between"
+              >
+                {/* Glow Overlay */}
+                <div className="absolute inset-0 rounded-3xl bg-linear-to-b from-amber-500/5 via-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
-              <div className="relative">
-                {/* Card Title */}
-                <div className="flex items-center gap-3 mb-6">
-                  <group.icon className="w-8 h-9 text-yellow-400" />
-                  <h4 className="text-lg font-semibold text-white">
-                    {group.title}
-                  </h4>
-                </div>
-
-                {/* Skill Bars */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                  {group.items.map((skill) => (
-                    <div
-                      key={skill.name}
-                      className="group relative flex flex-col items-center tracking-tighter gap-3 rounded-2xl border border-zinc-800 bg-zinc-950/60 px-4 py-3 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-amber-500/50 hover:shadow-lg hover:shadow-amber-500/20"
-                    >
-                      {/* Hover gradient overlay */}
-                      <div className="pointer-events-none absolute inset-0 rounded-xl bg-linear-to-br from-amber-400/5 to-orange-500/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
-                      {/* Icon */}
-                      <skill.icon className="relative h-5 w-5 text-amber-400 transition-transform duration-300 group-hover:scale-110" />
-
-                      {/* Skill Name */}
-                      <span className="relative text-sm font-medium text-zinc-300">
-                        {skill.name}
-                      </span>
+                <div className="relative space-y-6">
+                  {/* Category Title Header */}
+                  <div className="flex items-center gap-3.5 border-b border-zinc-800/80 pb-4">
+                    <div className="p-3 rounded-2xl bg-amber-500/10 text-amber-400 border border-amber-500/20 group-hover:scale-110 transition-transform">
+                      <GroupIcon className="w-6 h-6" />
                     </div>
-                  ))}
+                    <h4 className="text-xl font-bold text-white tracking-wide">
+                      {group.title}
+                    </h4>
+                  </div>
+
+                  {/* Skill Items Grid */}
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {group.items.map((skill) => {
+                      const SkillIcon = skill.icon;
+                      return (
+                        <motion.div
+                          key={skill.name}
+                          whileHover={{ scale: 1.05, y: -2 }}
+                          className="relative flex flex-col items-center justify-center p-3.5 rounded-2xl border border-zinc-800/90 bg-zinc-900/60 hover:bg-zinc-900 hover:border-amber-500/50 transition-all group/item shadow-sm"
+                        >
+                          <SkillIcon className="w-6 h-6 text-amber-400 group-hover/item:scale-110 transition-transform mb-2" />
+                          <span className="text-xs font-semibold text-zinc-300 text-center line-clamp-1">
+                            {skill.name}
+                          </span>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </div>
-
-      {/* Animations (reuse About style) */}
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        @keyframes pulse-glow {
-          0%,
-          100% {
-            opacity: 1;
-            box-shadow: 0 0 8px #facc15;
-          }
-          50% {
-            opacity: 0.7;
-            box-shadow: 0 0 12px #facc15;
-          }
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.8s ease-out forwards;
-        }
-
-        .animate-slide-in-left {
-          animation: slide-in-left 1s ease-out forwards;
-        }
-
-        .animate-slide-in-right {
-          animation: slide-in-right 1s ease-out 0.2s forwards;
-          opacity: 0;
-        }
-
-        .animate-pulse-glow {
-          animation: pulse-glow 2s ease-in-out infinite;
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.8s ease-out forwards;
-        }
-      `}</style>
     </section>
   );
 }

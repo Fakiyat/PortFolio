@@ -1,12 +1,14 @@
+import dynamic from "next/dynamic";
 import Hero from "./components/hero/Hero";
-import Contact from "./components/contact/Contact";
-import About from "./components/about/About";
 
-import Project from "./components/projects/Project";
-import Skills from "./components/skills/Skills";
-import Experience from "./components/experience/experience";
+// Dynamic Code-Splitting for Below-The-Fold Sections to Optimize Initial Bundle & LCP
+const About = dynamic(() => import("./components/about/About"));
+const Skills = dynamic(() => import("./components/skills/Skills"));
+const Project = dynamic(() => import("./components/projects/Project"));
+const Experience = dynamic(() => import("./components/experience/experience"));
+const Contact = dynamic(() => import("./components/contact/Contact"));
 
-function Home() {
+export default function Home() {
   return (
     <div>
       <Hero />
@@ -18,5 +20,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

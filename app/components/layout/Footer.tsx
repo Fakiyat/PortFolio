@@ -1,4 +1,6 @@
 "use client";
+
+import { memo } from "react";
 import {
   IconBrandLinkedin,
   IconBrandGithub,
@@ -8,7 +10,7 @@ import {
 } from "@tabler/icons-react";
 import { personaldetails, personalInfo } from "@/data/data";
 
-export default function FooterMinimal() {
+function FooterMinimal() {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -16,7 +18,8 @@ export default function FooterMinimal() {
       {/* Top glow line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-linear-to-r from-transparent via-amber-500/50 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-8">
+      {/* Container with generous bottom padding (pb-28 sm:pb-24) to clear fixed floating Navbar */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-10 pb-28 sm:pb-24">
         {/* Single row layout */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Left - Copyright */}
@@ -80,3 +83,5 @@ export default function FooterMinimal() {
     </footer>
   );
 }
+
+export default memo(FooterMinimal);

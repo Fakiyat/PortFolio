@@ -1,110 +1,155 @@
 "use client";
-import Image from "next/image";
+
+import { useMemo, useState } from "react";
+import { motion, Variants } from "framer-motion";
 import {
   IconDownload,
   IconMail,
   IconBrandLinkedin,
   IconBrandGithub,
+  IconTerminal2,
+  IconSparkles,
 } from "@tabler/icons-react";
 
-import { aboutData, personalInfo } from "@/data/data";
+import { personalInfo } from "@/data/data";
 import { ModernStatusBadge } from "../ui/Badge/Badge";
 import PillButton from "../ui/pillbutton/pillButton";
 import IconButton from "../ui/iconButton/iconbutton";
 import HeroBackground from "@/background/animation/HeroAnimation";
-
-import { useInViewport } from "@/hooks/useInViewPort";
-import { useMemo } from "react";
 import TypingAnimation from "@/background/animation/typingAnimation";
+import User3DAvatar from "../ui/User3DAvatar";
+import InteractiveTerminal from "../ui/InteractiveTerminal";
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 25 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 export default function HeroSection() {
-  const { ref, inView } = useInViewport<HTMLDivElement>();
+  const [isTerminalOpen, setIsTerminalOpen] = useState(false);
 
   const roleTitles = useMemo(
-    () => [" Developer", " Engineer", " UI Engineer", " Web Developer"],
-    []
+    () => [" Software Engineer", " Architect", " UI/UX Engineer", " Developer"],
+    [],
   );
 
   return (
     <section
       id="home"
-      ref={ref}
-      className="relative min-h-screen overflow-hidden isolate bg-black"
+      className="relative min-h-screen overflow-hidden isolate bg-black flex items-center justify-center pt-24 pb-16"
     >
-      {inView && <HeroBackground />}
+      {/* Background Motion Effects */}
+      <HeroBackground />
 
-      <div className="absolute inset-0" />
+      {/* Main Content Container */}
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-16 items-center min-h-[85vh]"
+        >
+          {/* Left Column: Text & CTAs */}
+          <div className="space-y-8">
+            {/* Status Pill Badge */}
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-wrap items-center gap-3"
+            >
+              <ModernStatusBadge
+                variant="floating"
+                dotColor="orange"
+                text="Available for SDE-1 / Frontend Engineer roles"
+              />
+            </motion.div>
 
-      {/* Main Hero Content */}
-      <div className="relative z-10 mx-auto px-6 sm:px-8 lg:px-12 pt-20 pb-32">
-        <ModernStatusBadge
-          variant="floating"
-          dotColor="orange"
-          text="Available for SDE-1 / Frontend Engineer roles"
-        />
-
-        <div className="grid grid-cols-1 lg:grid-cols-[1.7fr_0.8fr] gap-13 items-center min-h-screen">
-          {/* Left Content */}
-          <div className="relative z-20 space-y-8">
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-3 animate-fade-in">
+            {/* Greeting Eyebrow */}
+            <motion.div
+              variants={itemVariants}
+              className="inline-flex items-center gap-3"
+            >
               <div className="w-12 h-px bg-linear-to-r from-transparent via-amber-400 to-transparent" />
-
-              <p className="flex items-center gap-1 text-gray-400 text-sm tracking-wider uppercase font-light">
+              <p className="flex items-center gap-1.5 text-zinc-400 text-sm tracking-wider uppercase font-medium">
                 Hey, I'm
-                <span className="flex items-center gap-1 text-amber-400">
+                <span className="text-amber-400 font-bold flex items-center gap-1">
                   {personalInfo.name}
-                  <span className="inline-block text-2xl animate-[wave_1.4s_ease-in-out_infinite]">
+                  <span className="inline-block text-xl animate-[wave_1.4s_ease-in-out_infinite]">
                     👋
                   </span>
                 </span>
               </p>
-            </div>
+            </motion.div>
 
             {/* Main Heading */}
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold leading-33 tracking-normal">
-              <span className="block text-white animate-slide-up">
-                Frontend
-              </span>
+            <motion.div variants={itemVariants} className="space-y-2">
+              <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black leading-[1.05] tracking-tight">
+                <span className="block text-white drop-shadow-md">
+                  Frontend
+                </span>
+                <TypingAnimation
+                  texts={roleTitles}
+                  typeSpeed={0.08}
+                  deleteSpeed={0.04}
+                  pauseAfterType={2.5}
+                  pauseAfterDelete={0.5}
+                  startDelay={0.8}
+                  loop
+                  showCursor
+                  className="block bg-linear-to-r from-amber-300 via-yellow-400 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(251,191,36,0.4)]"
+                  cursorClassName="text-amber-400"
+                />
+              </h1>
+            </motion.div>
 
-              <TypingAnimation
-                texts={roleTitles}
-                typeSpeed={0.08}
-                deleteSpeed={0.04}
-                pauseAfterType={2.5}
-                pauseAfterDelete={0.5}
-                startDelay={0.8}
-                loop
-                showCursor
-                className="block bg-linear-to-r from-amber-300 via-yellow-400 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(251,191,36,0.35)]"
-                cursorClassName="text-amber-400"
-              />
-            </h1>
-
-            {/* Subheading */}
-            <p className="text-gray-400 text-lg max-w-md leading-relaxed animate-fade-in animation-delay-400">
+            {/* Headline Subtitle */}
+            <motion.p
+              variants={itemVariants}
+              className="text-zinc-400 text-base sm:text-lg max-w-xl leading-relaxed font-light"
+            >
               {personalInfo.headline}
-            </p>
+            </motion.p>
 
             {/* Info Cards */}
-            <div className="grid grid-cols-2 gap-6 pt-8 max-w-3xl animate-fade-in animation-delay-600">
+            <motion.div
+              variants={itemVariants}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl"
+            >
               {[personalInfo.intro[0], personalInfo.intro[1]].map((text, i) => (
                 <div
                   key={i}
-                  className="group relative bg-linear-to-br from-zinc-900/50 to-zinc-900/30 backdrop-blur-sm border border-zinc-800/50 rounded-2xl p-6 hover:border-amber-500/50 transition-all duration-500 hover:shadow-lg hover:shadow-amber-500/20 hover:-translate-y-1"
+                  className="group relative bg-zinc-900/60 backdrop-blur-md border border-zinc-800/80 rounded-2xl p-4 hover:border-amber-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10 hover:-translate-y-0.5 overflow-hidden"
                 >
-                  <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-amber-400/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                  <div className="relative text-center">
-                    <h3 className="text-amber-400 text-sm font-medium">
+                  <div className="absolute inset-0 bg-linear-to-r from-amber-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative flex items-center gap-3">
+                    <IconSparkles className="w-4 h-4 text-amber-400 shrink-0" />
+                    <h3 className="text-zinc-300 text-xs sm:text-sm font-medium leading-snug">
                       {text}
                     </h3>
                   </div>
                 </div>
               ))}
-            </div>
+            </motion.div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-6  animate-fade-in animation-delay-800">
+            {/* Action CTA Buttons */}
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-wrap items-center gap-4 pt-2"
+            >
               <PillButton
                 variant="primary"
                 size="md"
@@ -118,16 +163,19 @@ export default function HeroSection() {
               <PillButton
                 variant="secondary"
                 size="md"
-                href={`#contact`}
+                href="#contact"
                 icon={<IconMail className="h-5 w-5" />}
                 iconPosition="left"
               >
                 Contact Me
               </PillButton>
-            </div>
+            </motion.div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-4 pt-4 animate-fade-in animation-delay-900">
+            <motion.div
+              variants={itemVariants}
+              className="flex items-center gap-4 pt-2"
+            >
               <IconButton
                 href={personalInfo.linkedin}
                 icon={<IconBrandLinkedin className="h-5 w-5" />}
@@ -144,86 +192,24 @@ export default function HeroSection() {
                 label="Email"
                 target="_self"
               />
-            </div>
+            </motion.div>
           </div>
 
-          {/* Right Side */}
-          <div className="relative flex flex-col items-center gap-10 lg:gap-12 animate-slide-in-right">
-            <div className="relative w-full max-w-lg">
-              <div className="relative group mx-auto w-fit">
-                {/* Golden Glow */}
-                <div className="absolute -inset-6 bg-linear-to-br from-amber-500/20 via-orange-400/20 to-yellow-400/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-
-                <div className="relative">
-                  <div className="relative rounded-full overflow-hidden border-4 border-zinc-900/80 shadow-2xl shadow-black/50 w-70 h-90 lg:w-100 lg:h-120">
-                    <Image
-                      src="/code2.webp"
-                      alt={aboutData.greeting}
-                      width={500}
-                      height={500}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-                      priority
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          {/* Right Column: 3D Mouse Tracking Avatar */}
+          <motion.div
+            variants={itemVariants}
+            className="flex items-center justify-center"
+          >
+            <User3DAvatar imageSrc="/code2.webp" name={personalInfo.name} />
+          </motion.div>
+        </motion.div>
       </div>
 
-      {/* Animations */}
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes slide-up {
-          from {
-            opacity: 0;
-            transform: translateY(40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.8s ease-out forwards;
-        }
-
-        .animate-slide-up {
-          animation: slide-up 0.8s ease-out forwards;
-        }
-
-        .animation-delay-400 {
-          animation-delay: 0.4s;
-          opacity: 0;
-        }
-
-        .animation-delay-600 {
-          animation-delay: 0.6s;
-          opacity: 0;
-        }
-
-        .animation-delay-800 {
-          animation-delay: 0.8s;
-          opacity: 0;
-        }
-
-        .animation-delay-900 {
-          animation-delay: 0.9s;
-          opacity: 0;
-        }
-      `}</style>
+      {/* Terminal CLI Modal */}
+      <InteractiveTerminal
+        isOpen={isTerminalOpen}
+        onClose={() => setIsTerminalOpen(false)}
+      />
     </section>
   );
 }
